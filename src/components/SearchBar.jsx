@@ -1,8 +1,10 @@
+
+import styles from "./Cards.module.css";
 export default function SearchBar(props) {
    return (
-      <div>
-            <input type='search' />
-         <button onClick={props.onSearch}>Agregar</button>
-      </div>
+      < >
+            <input type='search' className={styles.inputSearchBar} />
+         <button onClick={props.onSearch} className={styles.buttonSearchBar}>Agregar</button>
+      </>
    );
 }

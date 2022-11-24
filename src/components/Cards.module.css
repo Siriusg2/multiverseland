@@ -1,0 +1,97 @@
+/* .App {
+  display: flex;
+  flex-direction: row;
+} */
+
+
+
+/* } */ 
+
+.divCards {
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: space-evenly;
+  color: #fcff4f;
+  margin-top: 150px; 
+}
+
+.divCard {
+      margin: 3%;
+        position: relative;
+        background-color: white;
+        padding-top: 40px;  
+        padding-left: 0px;
+        padding-bottom: 50px;
+        border-radius: 10px;
+        box-shadow:1px 1px 10px 1px  white;
+}
+
+
+
+.firstText{
+    position: absolute;
+      top: 280px;
+      left: 10px;
+      color: white;
+     
+      opacity: 0.7;    
+      background-color: black;
+}
+
+.secondText {
+  position: absolute;
+    bottom: -10px;
+    right: 40px;
+    color: black;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.thirdText {
+  position: absolute;
+  bottom: -10px;
+  left: 40px;
+  color: black;
+      font-style: italic;
+        font-weight: normal;
+}
+
+
+.button{
+  color: white;
+
+  align-items: center;
+  background-color: red;
+  position: absolute;
+  left: 265px;
+  bottom: 360px;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+
+}
+
+
+
+.divSearchBar{
+  display: flex;
+    flex-direction: row nowrap;
+    justify-content: center;
+   
+}
+
+.inputSearchBar{
+  width: 220px;
+height: 45px;
+background-color: white;
+margin-right: 30px;
+border-radius: 5px;
+    box-shadow: 1px 1px 10px 1px white;
+  }
+
+  .buttonSearchBar{
+    background-color: rgb(8, 194, 8);
+    border-radius: 5px;
+    width: 100px;
+    color: white;
+  }
