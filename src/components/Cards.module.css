@@ -1,15 +1,6 @@
-/* .App {
-  display: flex;
-  flex-direction: row;
-} */
-
-
-
-/* } */ 
-
 .divCards {
   display: flex;
-  flex-direction: row nowrap;
+  flex-direction: row wrap;
   justify-content: space-evenly;
   color: #fcff4f;
   margin-top: 150px; 
@@ -76,8 +67,21 @@
 .divSearchBar{
   display: flex;
     flex-direction: row nowrap;
-    justify-content: center;
+    justify-content: flex-end;
+    background-color: black;
+    opacity: 1;
+    margin-right: 20px;
+    margin-top: 10px;
    
+}
+
+.divNavBar {
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: flex-end;
+  background-color: black;
+
+
 }
 
 .inputSearchBar{
