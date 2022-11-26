@@ -5,7 +5,7 @@ import styles from "./Cards.module.css";
 function Nav(props) {
   return (
     <div className={styles.divSearchBar}>
-      <SearchBar fnOnS={props.fnOnSearch} />
+      <SearchBar fnOnS={props.fnOnSearch} random={props.random} />
     </div>
   );
 }

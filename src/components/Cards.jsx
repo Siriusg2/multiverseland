@@ -5,8 +5,7 @@ export default function Cards(props) {
     <>
       {props.characters.map((card) => (
         <Card
-          Onclose={card.onClose}
-          key={card.name}
+          onClose={props.onClose}
           name={card.name}
           species={card.species}
           gender={card.gender}

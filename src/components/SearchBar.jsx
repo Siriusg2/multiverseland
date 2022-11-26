@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import styles from "./Cards.module.css";
 
@@ -11,21 +11,25 @@ export default function SearchBar(props) {
   };
 
   return (
-    <div>
+    <>
       <input
-        type="text"
         placeholder="Ingresa un caracter numerico"
-        handleChange={onInput}
+        onChange={onInput}
         className={styles.inputSearchBar}
+        id="input"
       />
-
       <button
-        type="submit"
-        onClick={props.fnOnS(character)}
-        className={styles.buttonSearchBar}
+        className={styles.buttonSearch}
+        onClick={() => {
+          props.fnOnS(character);
+          setCharactername("");
+        }}
       >
-        Agregar
+        Buscar
       </button>
-    </div>
+      <button className={styles.buttonRandom} onClick={() => props.random()}>
+        Busqueda aleatoria
+      </button>
+    </>
   );
 }
