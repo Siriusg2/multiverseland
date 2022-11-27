@@ -6,9 +6,17 @@ import styles from "./components/Cards.module.css";
 import Nav from "./components/Nav";
 import { useState } from "react";
 
+/*componente principal*/
 function App() {
+  /*estado del componente*/
   const [characters, setCharacters] = useState([]);
 
+  /*funcion que se pasa por props hasta el componente SearchBar
+con esta funcion, el boton "agregar" de la barra de busqueda hace un llamado a la API
+y basado en la informacion del estado, genera una nueva tarjeta
+o envia un alert para indicar que esta repetida, adicionalmente 
+limpia el value del input para que el usuario no deba borrar lo que ingreso 
+cada vez que quiera agregar una tarjeta nueva*/
   const Onsearch = (character) => {
     const input = document.querySelector("#input");
 
@@ -33,12 +41,21 @@ function App() {
       });
   };
 
+  /*funcion que se pasa por props hasta el componente Card, 
+  para hacer funcionar al boton de cerrar tarjeta.
+  usa un filter para setear el estado a todas las tarjetas que no contentgan el 
+  nombre pasado por parametro*/
   const onClose = (id) => {
     const filtered = characters.filter((character) => character.name !== id);
 
     setCharacters(filtered);
   };
 
+  /*funcion que se pasa por props hasta el componente SearchBar
+con esta funcion, el boton "busqueda aleatoria", genera un numero random 
+entre 1 y 826 (cantidad de objetos en la API), y basado en la informacion del estado
+genera una nueva tarjeta, o envia un alert, para avisar al usuario que la tarjeta ya existe
+(improbable, pero puede suceder jajaja)*/
   const random = () => {
     const numrandom = () => Math.floor(Math.random() * (827 - 1) + 1);
     const random = numrandom();
@@ -55,8 +72,9 @@ function App() {
         }
       });
   };
-
-  return (
+  /*
+          cuerpo del componente
+*/ return (
     <>
       <div className={styles.divNavBar}>
         <Nav fnOnSearch={Onsearch} random={random} />

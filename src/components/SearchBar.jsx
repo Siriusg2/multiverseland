@@ -5,6 +5,8 @@ import styles from "./Cards.module.css";
 export default function SearchBar(props) {
   const [character, setCharactername] = useState("");
 
+  /*  handleEvent para el input, setea el estado de este componente al 
+  valor ingresado por el usuario mediante el listener onChange*/
   const onInput = (event) => {
     const value = event.target.value;
     setCharactername(value);
@@ -18,6 +20,7 @@ export default function SearchBar(props) {
         className={styles.inputSearchBar}
         id="input"
       />
+
       <button
         className={styles.buttonSearch}
         onClick={() => {
