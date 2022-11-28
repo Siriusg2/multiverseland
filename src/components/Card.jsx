@@ -1,4 +1,6 @@
+import { NavLink } from "react-router-dom";
 import styles from "./Cards.module.css";
+
 export default function Card(props) {
   return (
     <div className={styles.divCard}>
@@ -11,7 +13,9 @@ export default function Card(props) {
         X
       </button>
       <img src={props.image} alt="" />
-      <h2 className={styles.firstText}>{props.name}</h2>
+      <NavLink to={`/detail/${props.name}`}>
+        <h2 className={styles.firstText}>{props.name}</h2>
+      </NavLink>
 
       <h2 className={styles.secondText}>{props.species}</h2>
       <h2 className={styles.thirdText}>{props.gender}</h2>

@@ -5,6 +5,9 @@ import React from "react";
 import styles from "./components/Cards.module.css";
 import Nav from "./components/Nav";
 import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import About from "./components/About";
+import Detail from "./components/Detail";
 
 /*componente principal*/
 function App() {
@@ -76,13 +79,23 @@ genera una nueva tarjeta, o envia un alert, para avisar al usuario que la tarjet
           cuerpo del componente
 */ return (
     <>
-      <div className={styles.divNavBar}>
-        <Nav fnOnSearch={Onsearch} random={random} />
-      </div>
-      <hr />
-      <div className={styles.divCards}>
-        <Cards characters={characters} onClose={onClose} />
-      </div>
+      <Nav fnOnSearch={Onsearch} random={random} className={styles.divNavBar} />
+      <Routes>
+        <Route
+          exact
+          path="/home"
+          element={
+            <Cards
+              characters={characters}
+              onClose={onClose}
+              className={styles.divCards}
+            />
+          }
+        />
+
+        <Route path="/about" element={<About />} />
+        <Route path="/detail/:detailID" element={<Detail />} />
+      </Routes>
     </>
   );
 }
