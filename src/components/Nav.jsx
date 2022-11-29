@@ -7,6 +7,8 @@ import {
   unActivestyleHome,
   activeStyleAbout,
   unActivestyleAbout,
+  activeStyleLogout,
+  unActivestyleLogout,
 } from "./NavStyles.js";
 
 function Nav(props) {
@@ -19,6 +21,12 @@ function Nav(props) {
         }
       >
         Home
+      </NavLink>
+      <NavLink
+        to="/"
+        style={({ isActive }) => (isActive ? undefined : unActivestyleLogout)}
+      >
+        Logout
       </NavLink>
       <NavLink
         to="/about"

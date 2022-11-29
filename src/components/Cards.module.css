@@ -45,6 +45,7 @@ height: 850px;
     height: 500px;
     width: 500px;
    
+   
 
   
 
@@ -78,6 +79,9 @@ justify-content: center;
 }
 
 .divCard {
+  display: flex;
+  flex-direction: row nowrap;
+  
 border: 10px solid yellow;
       margin: 3%;
         position: relative;
@@ -106,21 +110,23 @@ border: 10px solid yellow;
       top: 280px;
       left: 10px;
       color: white;
-     
       opacity: 0.7;    
       background-color: black;
+      justify-content: center;
 }
 
 .secondText {
+
   position: absolute;
     bottom: -10px;
-    right: 40px;
+    
     color: black;
     font-style: italic;
     font-weight: normal;
-}
+justify-content: flex-end;}
 
 .thirdText {
+    align-items: flex-start;
   position: absolute;
   bottom: -10px;
   left: 40px;
@@ -135,8 +141,8 @@ border: 10px solid yellow;
 
   align-items: center;
   background-color: red;
-  position: relative;
-  left: 265px;
+  position: absolute;
+  left: auto;
   bottom: 360px;
   height: 30px;
   width: 30px;

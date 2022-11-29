@@ -9,6 +9,7 @@ export default function SearchBar(props) {
   valor ingresado por el usuario mediante el listener onChange*/
   const onInput = (event) => {
     const value = event.target.value;
+
     setCharactername(value);
   };
 

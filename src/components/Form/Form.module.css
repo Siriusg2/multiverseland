@@ -1,0 +1,29 @@
+.divForm{
+    display: flex;
+    flex-direction: column wrap;
+   justify-content: center;
+   align-items: center;
+    height: 800px;
+    width: 400px;
+    border: 10px solid red;
+}
+
+.Form{
+    display: flex;
+    flex-direction: column wrap;
+  
+    align-items: center;
+    
+}
+
+.warning {
+    border: solid red 1px;
+    border-radius: 0.2em;
+    color: red;
+}
+
+.danger {
+    font-size: 10px;
+    color: red;
+    margin-left: 10em;
+}
