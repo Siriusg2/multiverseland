@@ -2,15 +2,36 @@ import React from "react";
 import SearchBar from "./SearchBar";
 import styles from "./Cards.module.css";
 import { NavLink } from "react-router-dom";
+import {
+  activeStyleHome,
+  unActivestyleHome,
+  activeStyleAbout,
+  unActivestyleAbout,
+} from "./NavStyles.js";
 
 function Nav(props) {
   return (
-    <div className={styles.divSearchBar}>
-      <NavLink to="/home">hola soy el home</NavLink>
-      <NavLink to="/about">hola soy el link</NavLink>
-      <NavLink to="/detail">hola soy el detail</NavLink>
-      <SearchBar fnOnS={props.fnOnSearch} random={props.random} />
-    </div>
+    <>
+      <NavLink
+        to="/home"
+        style={({ isActive }) =>
+          isActive ? activeStyleHome : unActivestyleHome
+        }
+      >
+        Home
+      </NavLink>
+      <NavLink
+        to="/about"
+        style={({ isActive }) =>
+          isActive ? activeStyleAbout : unActivestyleAbout
+        }
+      >
+        About
+      </NavLink>
+      <div className={styles.divSearchBar}>
+        <SearchBar fnOnS={props.fnOnSearch} random={props.random} />
+      </div>
+    </>
   );
 }
 

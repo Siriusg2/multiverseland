@@ -13,7 +13,7 @@ export default function Card(props) {
         X
       </button>
       <img src={props.image} alt="" />
-      <NavLink to={`/detail/${props.name}`}>
+      <NavLink to={`/detail/${props.id}`}>
         <h2 className={styles.firstText}>{props.name}</h2>
       </NavLink>
 

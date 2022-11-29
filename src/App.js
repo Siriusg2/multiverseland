@@ -8,6 +8,7 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import About from "./components/About";
 import Detail from "./components/Detail";
+import NotFound from "./components/NotFound";
 
 /*componente principal*/
 function App() {
@@ -34,6 +35,7 @@ cada vez que quiera agregar una tarjeta nueva*/
               throw alert("ya existe la tarjeta");
             }
           });
+
           setCharacters((oldChars) => [...oldChars, data]);
           input.value = "";
         } else {
@@ -94,7 +96,9 @@ genera una nueva tarjeta, o envia un alert, para avisar al usuario que la tarjet
         />
 
         <Route path="/about" element={<About />} />
+
         <Route path="/detail/:detailID" element={<Detail />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
