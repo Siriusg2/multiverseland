@@ -1,0 +1,140 @@
+.divCard {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin: 5%;
+
+    background-color: white;
+
+    border-radius: 10px;
+    box-shadow: 5px 3px 15px 10px rgb(246, 136, 9);
+    width: 18vw;
+    height: 48vh;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    opacity: .8;
+    margin-top: 100px;
+    position: relative;
+
+
+}
+
+
+.divCard:hover {
+    opacity: 1;
+    transition: 500ms;
+
+    box-shadow: 5px 3px 15px 10px rgb(8, 194, 8);
+
+}
+
+.imgCard {
+
+    height: 70%;
+    width: 16vw;
+    border-radius: 20px;
+    align-self: center;
+    box-shadow: 2px 2px 20px 2px black;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+.firstText {
+
+    color: white;
+    ;
+    opacity: 1;
+    background-color: rgb(246, 136, 9);
+    font-size: 1.2vw;
+    position: absolute;
+    top: 16vw;
+    font-size: 1vw;
+    left: .8vw;
+    text-decoration: underline;
+    align-content: center;
+    border-radius: 25px;
+    padding: 0.2vw;
+
+
+}
+
+.firstText:hover {
+    opacity: 1;
+    color: rgb(246, 136, 9);
+    background-color: rgb(8, 194, 8);
+    transition: 200ms;
+
+    text-decoration: none;
+}
+
+.secondText {
+
+    position: relative;
+    bottom: -.2vw;
+    right: 5vw;
+    color: rgb(246, 136, 9);
+    ;
+    font-style: italic;
+
+    justify-content: flex-end;
+    font-size: 1.2vw;
+    font-weight: bold;
+}
+
+.thirdText {
+    font-size: 1.2vw;
+    position: relative;
+    bottom: 2.5vw;
+    left: 5vw;
+    color: rgb(246, 136, 9);
+    ;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.buttonClose {
+    color: white;
+
+    align-items: center;
+    background-color: red;
+    position: absolute;
+
+    left: 15vw;
+    top: .6vw;
+    border-radius: 5px;
+
+}
+
+.buttonClose:hover {
+    box-shadow: 1px 1px 1px 2px black;
+
+    transition: 200ms;
+
+
+}
+
+.buttonFav {
+
+
+    font-size: 1.3vw;
+    background-color: transparent;
+    position: relative;
+    border: transparent;
+    right: 7vw;
+    top: .5vw;
+
+
+}
+
+.buttonFav:hover {
+
+    box-shadow: 2px 2px 2px 2px black;
+    border-radius: 50%;
+    transition: 400ms;
+
+}

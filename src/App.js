@@ -1,17 +1,19 @@
 import "./App.css";
-import Cards from "./components/Cards.jsx";
+import Cards from "./components/Cards/Cards";
 
 import React from "react";
-import styles from "./components/Cards.module.css";
-import Nav from "./components/Nav";
+import styles from "../src/components/Cards/Cards.module.css";
+import Nav from "./components/Navbar/Nav";
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import About from "./components/About";
-import Detail from "./components/Detail";
-import NotFound from "./components/NotFound";
+import About from "./components/About/About";
+import Detail from "./components/Detail/Detail";
+import NotFound from "./components/NotFound/NotFound";
 import Form from "./components/Form/Form";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Favorites from "./components/Favorites/Favorites";
+import Footer from "./components/Footer/Footer";
 
 /*componente principal*/
 function App() {
@@ -19,8 +21,8 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const location = useLocation();
   const [access, setAccess] = useState(false);
-  const username = "gibsonavilan@gmail.com";
-  const password = "sebas2411";
+  const username = "ggilavilans@gmail.com";
+  const password = "00000";
   const navigate = useNavigate("");
 
   // validacion de los datos del formulario de login
@@ -110,6 +112,7 @@ genera una nueva tarjeta, o envia un alert, para avisar al usuario que la tarjet
           random={random}
           className={styles.divNavBar}
         />
+        <Footer />
         <Routes>
           <Route
             exact
@@ -127,11 +130,17 @@ genera una nueva tarjeta, o envia un alert, para avisar al usuario que la tarjet
 
           <Route path="/detail/:detailID" element={<Detail />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/favorites" element={<Favorites />} />
         </Routes>
       </>
     );
   } else {
-    return <Form login={login} />;
+    return (
+      <div className={styles.divForm}>
+        <Form login={login} />
+        <Footer />;
+      </div>
+    );
   }
 }
 

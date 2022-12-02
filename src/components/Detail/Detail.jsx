@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Cards.module.css";
+import styles from "./Detail.module.css";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
@@ -15,7 +15,7 @@ const Detail = (props) => {
     location: "",
     type: "",
   });
-
+  const propID = props.id;
   useEffect(() => {
     fetch(
       `https://rickandmortyapi.com/api/character/${parseInt(cardName.detailID)}`
@@ -34,7 +34,6 @@ const Detail = (props) => {
             location: char.location.name,
             type: char.type,
           });
-          console.log(character);
         } else {
           window.alert("No hay personajes con ese ID");
         }
@@ -43,45 +42,31 @@ const Detail = (props) => {
         window.alert("No hay personajes con ese ID");
       });
     return setCharacter({});
-  }, []);
+  }, [cardName, propID]);
   return (
     <div className={styles.divDetail}>
       <div className={styles.divDetailtext}>
         <h3 className={styles.h3Info} style={{ color: "rgb(8, 194, 8)" }}>
-          <span style={{ color: "rgb(246, 136, 9)", opacity: 1 }}>Nombre:</span>{" "}
-          {character.name}
+          <span className={styles.label}>Name:</span> {character.name}
           <hr />
-          <span style={{ color: "rgb(246, 136, 9)", opacity: 1 }}>
-            {" "}
-            Especie:{" "}
-          </span>
+          <span className={styles.label}> Specie: </span>
           {character.species}
-          <hr />{" "}
-          <span style={{ color: "rgb(246, 136, 9)", opacity: 1 }}>
-            Estatus:
-          </span>{" "}
+          <hr /> <span className={styles.label}>Status:</span>{" "}
           {character.status}
-          <hr />{" "}
-          <span style={{ color: "rgb(246, 136, 9)", opacity: 1 }}>
-            {" "}
-            Genero:
-          </span>{" "}
+          <hr /> <span className={styles.label}> Gender:</span>{" "}
           {character.gender}
-          <hr />{" "}
-          <span style={{ color: "rgb(246, 136, 9)", opacity: 1 }}>
-            {" "}
-            Origen:{" "}
-          </span>
+          <hr /> <span className={styles.label}> Origin: </span>
           {character.origin}
-          <hr />{" "}
-          <span style={{ color: "rgb(246, 136, 9)", opacity: 1 }}>
-            Localizacion:
-          </span>{" "}
+          <hr /> <span className={styles.label}>Location:</span>{" "}
           {character.location}
         </h3>
       </div>
       <div className={styles.divDetailImage}>
-        <img src={character.image}></img>
+        <img
+          src={character.image}
+          alt={character.name}
+          className={styles.img}
+        ></img>
       </div>
     </div>
   );

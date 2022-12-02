@@ -1,0 +1,26 @@
+.inputSearchBar {
+
+    width: 220px;
+    height: 45px;
+    background-color: white;
+    margin-right: 30px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 1px white;
+}
+
+.buttonSearch {
+    background-color: rgb(8, 194, 8);
+    border-radius: 5px;
+    width: 100px;
+    color: white;
+    box-shadow: 1px 1px 10px 1px rgb(8, 194, 8);
+}
+
+.buttonRandom {
+    background-color: rgb(246, 136, 9);
+    border-radius: 5px;
+    width: 100px;
+    color: white;
+    box-shadow: 1px 1px 10px 1px rgb(246, 136, 9);
+    margin-left: 20px;
+}

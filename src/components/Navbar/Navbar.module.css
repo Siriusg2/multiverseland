@@ -1,0 +1,8 @@
+.divSearchBar {
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: flex-end;
+    width: 100%;
+
+
+}
