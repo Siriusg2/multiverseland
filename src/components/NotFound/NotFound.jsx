@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from "react";
 import styles from "./NotFound.module.css";
 const NotFound = () => {
@@ -5,3 +7,5 @@ const NotFound = () => {
 };
 
 export default NotFound;
+// eslint-disable-next-line linebreak-style
+/* eslint-enable */

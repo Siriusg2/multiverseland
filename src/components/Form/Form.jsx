@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react";
 import styles from "./Form.module.css";
 
@@ -120,3 +121,5 @@ class Form extends React.Component {
 }
 
 export default Form;
+// eslint-disable-next-line linebreak-style
+/* eslint-enable */

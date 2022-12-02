@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { NavLink } from "react-router-dom";
 import styles from "./Card.module.css";
 import { addFavorite, removeFavorite } from "../../redux/actions";
@@ -77,3 +78,5 @@ export const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Card);
+// eslint-disable-next-line linebreak-style
+/* eslint-enable */

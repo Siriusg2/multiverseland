@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import styles from "./Navbar.module.css";
@@ -45,3 +47,5 @@ function Nav(props) {
 }
 
 export default Nav;
+// eslint-disable-next-line linebreak-style
+/* eslint-enable */

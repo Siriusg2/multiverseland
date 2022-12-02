@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Card from "../Card/Card";
 import styles from "./Cards.module.css";
 
@@ -18,3 +19,5 @@ export default function Cards(props) {
     </div>
   );
 }
+// eslint-disable-next-line linebreak-style
+/* eslint-enable */

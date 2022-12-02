@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from "react";
 import styles from "./Detail.module.css";
 import { useState, useEffect } from "react";
@@ -73,3 +75,5 @@ const Detail = (props) => {
 };
 
 export default Detail;
+// eslint-disable-next-line linebreak-style
+/* eslint-enable */

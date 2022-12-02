@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { NavLink } from "react-router-dom";
 import styles from "./Favorites.module.css";
 
@@ -18,3 +20,5 @@ const Favorite = (props) => {
 };
 
 export default Favorite;
+// eslint-disable-next-line linebreak-style
+/* eslint-enable */

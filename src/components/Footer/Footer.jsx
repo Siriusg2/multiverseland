@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from "react";
 import styles from "./Footer.module.css";
 
@@ -12,3 +14,5 @@ class Footer extends React.Component {
 }
 
 export default Footer;
+// eslint-disable-next-line linebreak-style
+/* eslint-enable */

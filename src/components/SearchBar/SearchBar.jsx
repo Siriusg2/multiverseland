@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { useState } from "react";
 
 import styles from "./SearchBar.module.css";
@@ -37,3 +39,5 @@ export default function SearchBar(props) {
     </>
   );
 }
+// eslint-disable-next-line linebreak-style
+/* eslint-enable */

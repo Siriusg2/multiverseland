@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react";
 import { connect } from "react-redux";
 import Favorite from "./Favorite";
@@ -33,3 +34,5 @@ export const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, null)(Favorites);
+// eslint-disable-next-line linebreak-style
+/* eslint-enable */
