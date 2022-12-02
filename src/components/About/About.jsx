@@ -1,5 +1,5 @@
+/* eslint-disable */
 import React from "react";
-import ReactDOM from "react-dom";
 import styles from "./About.module.css";
 import foto from "./foto.jpg";
 
@@ -72,3 +72,6 @@ class About extends React.Component {
 }
 
 export default About;
+
+// eslint-disable-next-line linebreak-style
+/* eslint-enable */
