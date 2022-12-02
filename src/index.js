@@ -16,4 +16,5 @@ ReactDOM.render(
 
   document.getElementById("root")
 );
+// eslint-disable-next-line linebreak-style
 /* eslint-enable */

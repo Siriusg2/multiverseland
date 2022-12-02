@@ -144,4 +144,6 @@ genera una nueva tarjeta, o envia un alert, para avisar al usuario que la tarjet
 }
 
 export default App;
+
+// eslint-disable-next-line linebreak-style
 /* eslint-enable */
