@@ -5,7 +5,7 @@ import styles from "./Detail.module.css";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-const Detail = (props) => {
+const Detail = () => {
   const cardName = useParams();
   const [character, setCharacter] = useState({
     name: "",
@@ -17,7 +17,7 @@ const Detail = (props) => {
     location: "",
     type: "",
   });
-  const propID = props.id;
+
   useEffect(() => {
     fetch(
       `https://rickandmortyapi.com/api/character/${parseInt(cardName.detailID)}`
@@ -44,7 +44,7 @@ const Detail = (props) => {
         window.alert("No hay personajes con ese ID");
       });
     return setCharacter({});
-  }, [cardName, propID]);
+  }, [cardName]);
   return (
     <div className={styles.divDetail}>
       <div className={styles.divDetailtext}>

@@ -67,6 +67,7 @@ export const mapStateToProps = (state) => {
   return {
     ...state,
     myFavorites: [...state.myFavorites],
+    allCharacters: [...state.allCharacters]
   };
 };
 

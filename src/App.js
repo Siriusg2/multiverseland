@@ -22,7 +22,7 @@ function App() {
   const location = useLocation();
   const [access, setAccess] = useState(false);
   const username = "ggilavilans@gmail.com";
-  const password = "00000";
+  const password = "123456";
   const navigate = useNavigate("");
 
   // validacion de los datos del formulario de login
