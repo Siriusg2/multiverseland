@@ -1,12 +1,12 @@
 .divForm {
     display: flex;
     flex-direction: column wrap;
-    color: white;
+
     width: 40vw;
     height: 30vw;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: whitesmoke;
     margin-left: 30vw;
     margin-top: 8vw;
     border-radius: 30px;
@@ -108,12 +108,12 @@
     flex-direction: row wrap;
     justify-content: center;
     height: auto;
-    width: auto;
-
+    width: 0vw;
+    height: 0vw;
+    left: 18vw;
     font-weight: bold;
     color: rgb(8, 194, 8);
-    padding: 8px;
-
+    position: relative;
 
 }
 
@@ -125,6 +125,6 @@
     font-weight: bold;
     font-size: 1vw;
     font-style: italic;
-    text-shadow: 0.8em 0.3em .5em black;
+
 
 }
