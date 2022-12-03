@@ -21,16 +21,16 @@
     background-size: auto;
     border-radius: 50px;
     box-shadow: 1px 1px 20px 10px rgb(246, 136, 9);
-    opacity: .7;
+    opacity: .5;
 
 
 }
 
 .divDetailtext:hover {
 
-    opacity: 1;
+    opacity: .7;
     transition: 700ms;
-    text-shadow: 0.3em 0.2em .5em black;
+    text-shadow: 0.3em 0.2em .13em black;
     box-shadow: 5px 3px 20px 10px rgb(8, 194, 8);
 }
 

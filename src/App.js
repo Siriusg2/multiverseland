@@ -66,6 +66,7 @@ cada vez que quiera agregar una tarjeta nueva */
           input.value = "";
         }
       });
+    console.log(characters);
   };
 
   /* funcion que se pasa por props hasta el componente Card,
