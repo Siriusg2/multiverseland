@@ -59,6 +59,7 @@ function Card(props) {
       </NavLink>
       <h2 className={styles.secondText}>{props.species}</h2>
       <h2 className={styles.thirdText}>{props.gender}</h2>
+      <h3 className={styles.idCharacterText}>ID: #{props.id}</h3>
     </div>
   );
 }

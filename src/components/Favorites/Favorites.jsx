@@ -2,7 +2,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import Favorite from "./Favorite";
-import styles from "../Cards/Cards.module.css";
+import styles from "../Favorites/Favorites.module.css";
 import { orderCardsaction, filterCardsaction } from "../../redux/actions";
 
 class Favorites extends React.Component {
@@ -27,34 +27,43 @@ class Favorites extends React.Component {
 
   render() {
     return (
-      <div className={styles.divCards}>
-        <div>
-          <select name="order" onChange={(e)=>this.handleChangeOrder(e)}>
-   
-     
+      <div className={styles.containerFavorites}>
+        <div className={styles.filterOptions}>
+          <label className={styles.labelId}>Filter for Card's ID :</label>
+          <select
+            name="order"
+            className={styles.selectId}
+            onChange={(e) => this.handleChangeOrder(e)}
+          >
             <option value="Ascending">Ascending</option>
             <option value="Descending">Descending</option>
           </select>
-
-          
-          <select name="gender" onChange={(e)=>this.handleChangeFilter(e)}>
-       
+          <label className={styles.labelgender}>
+            Filter for Character's Gender:
+          </label>
+          <select
+            name="gender"
+            className={styles.selectGender}
+            onChange={(e) => this.handleChangeFilter(e)}
+          >
             <option value="Male">Male</option>
             <option value="Female">Female</option>
             <option value="Unknow">Unknow</option>
             <option value="Genderless">Genderless</option>
           </select>
         </div>
-        {this.props.myFavorites.map((card) => (
-          <Favorite
-            key={card.id}
-            id={card.id}
-            name={card.name}
-            species={card.species}
-            gender={card.gender}
-            image={card.image}
-          />
-        ))}
+        <div className={styles.divCardsFavorites}>
+          {this.props.myFavorites.map((card) => (
+            <Favorite
+              key={card.id}
+              id={card.id}
+              name={card.name}
+              species={card.species}
+              gender={card.gender}
+              image={card.image}
+            />
+          ))}
+        </div>
       </div>
     );
   }

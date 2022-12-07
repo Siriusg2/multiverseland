@@ -10,48 +10,59 @@ class Form extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  componentDidMount() {
-    this.setState({ errors: { ...this.validateForm(this.state) } });
-  }
+
   handleSubmit(event) {
     event.preventDefault();
-    if (!Object.keys(this.state.errors).length) {
+    if (!this.state.username.length && !this.state.password.length) {
+      this.setState({
+        ...this.state,
+        errors: { ...this.validateForm(this.state) },
+      });
+    } else if (
+      !Object.keys(this.state.errors).length &&
+      this.state.username.length &&
+      this.state.password.length
+    ) {
       alert("Los datos son correctos, pero no estas registrado");
 
       this.setState({ username: "", password: "", errors: {} });
     } else {
       alert("Debes corregir los errores");
-      console.log(this.state.errors);
     }
   }
 
   handleChange(event) {
-    this.setState({ [event.target.name]: event.target.value });
-    this.setState({ errors: { ...this.validateForm(this.state) } });
+    this.setState({ ...this.state, [event.target.name]: event.target.value });
+    this.setState({
+      errors: {
+        ...this.validateForm({
+          ...this.state,
+          [event.target.name]: event.target.value,
+        }),
+      },
+    });
   }
-  validateForm(state) {
+  validateForm({ username, password }) {
     const errors = {};
     const regexEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 
-    if (
-      !state.username ||
-      !regexEmail.test(state.username) ||
-      state.username.length > 35
-    ) {
-      errors.username = "Debe ser:";
-      errors.username1 = '- Un correo válido. Ejemplo: "alguien@algo.com"';
-      errors.username2 = "- De menos de 35 caracterres";
+    if (!username) {
+      errors.usernamevoid = 'El campo  "Username" no debe estar vacio';
+    } else if (!regexEmail.test(username)) {
+      errors.usernametype =
+        'Debe ser un correo válido. Ejemplo: "alguien@algo.com"';
+    } else if (username.length > 35) {
+      errors.usernamelength = "Debe tener menos de 35 caracterres";
     }
 
-    if (
-      state.password.length > 10 ||
-      state.password.length < 6 ||
-      !/[0-9]/.test(state.password)
-    ) {
-      errors.password = "La contraseña debe tener:";
-      errors.password1 = "- Mínimo seis caracteres";
-      errors.password2 = "- Máximo diez caracteres";
-      errors.password3 = "- Al menos un caracter numérico";
+    if (password.length === 0) {
+      errors.passwordvoid = 'El campo "Password" no debe estar vacio';
+    } else if (password.length < 6) {
+      errors.password6 = "Debe tener mínimo 6 caracteres";
+    } else if (!/[0-9]/.test(password)) {
+      errors.passwordnum = "Debe tener al menos 1 caracter numérico";
+    } else if (password.length > 10) {
+      errors.password10 = "Debe tener máximo 10 caracteres";
     }
 
     return errors;
@@ -65,51 +76,71 @@ class Form extends React.Component {
           onClick={() => this.props.login(this.state)}
         >
           <div className={styles.hr}>
-            <label htmlFor="username" className={styles.labels}>
-              Username:
-            </label>
-            <input
-              type="text"
-              name="username"
-              value={this.state.username}
-              onChange={this.handleChange}
-              placeholder="Ingresa tu correo..."
-              className={styles.input}
-            />
-            <span className={styles.span}>
-              {this.state.errors.username}
-              <br />
-              {this.state.errors.username1}
-              <br />
-              {this.state.errors.username2}
-              <br />
-            </span>
+            <div className={styles.divLabelInput}>
+              <label htmlFor="username" className={styles.labels}>
+                Username:
+              </label>
+              <input
+                type="text"
+                name="username"
+                value={this.state.username}
+                onChange={this.handleChange}
+                placeholder="Ingresa tu correo..."
+                className={styles.input}
+              />
+            </div>
+            <div className={styles.divSpan}>
+              {this.state.errors.usernamevoid && (
+                <p className={styles.span}>
+                  -{this.state.errors.usernamevoid}{" "}
+                </p>
+              )}
+
+              {this.state.errors.usernamelength && (
+                <p className={styles.span}>
+                  -{this.state.errors.usernamelength}
+                </p>
+              )}
+
+              {this.state.errors.usernametype && (
+                <p className={styles.span}>-{this.state.errors.usernametype}</p>
+              )}
+            </div>
+            <br className={styles.br} />
           </div>
           <br />
           <div className={styles.hr}>
-            <label htmlFor="password" className={styles.labels}>
-              Password:
-            </label>
-            <input
-              type="password"
-              name="password"
-              value={this.state.password}
-              onChange={this.handleChange}
-              placeholder="Ingresa tu contraseña..."
-              className={styles.input}
-            />
-            <span className={styles.span}>
-              {this.state.errors.password}
-              <br />
-              {this.state.errors.password1}
-              <br />
-              {this.state.errors.password2}
-              <br />
-              {this.state.errors.password3}
-            </span>
+            <div className={styles.divLabelInput}>
+              <label htmlFor="password" className={styles.labels}>
+                Password:
+              </label>
+              <input
+                type="password"
+                name="password"
+                value={this.state.password}
+                onChange={this.handleChange}
+                placeholder="Ingresa tu contraseña..."
+                className={styles.input}
+              />
+            </div>
+            <div className={styles.divSpan}>
+              {this.state.errors.passwordvoid && (
+                <p className={styles.span}>-{this.state.errors.passwordvoid}</p>
+              )}
+              {this.state.errors.password10 && (
+                <p className={styles.span}>-{this.state.errors.password10}</p>
+              )}
+
+              {this.state.errors.password6 && (
+                <p className={styles.span}>-{this.state.errors.password6}</p>
+              )}
+
+              {this.state.errors.passwordnum && (
+                <p className={styles.span}>-{this.state.errors.passwordnum}</p>
+              )}
+            </div>
           </div>
-          <br />
-          <div className={styles.divlogin}>
+          <div className={styles.divButtonLogin}>
             <button type="submit" className={styles.buttonlogin}>
               LOGIN
             </button>

@@ -3,7 +3,8 @@
     flex-direction: row wrap;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 3vw;
+    margin-top: 7vw;
+
 
 
 }
@@ -22,21 +23,23 @@
     border-radius: 50px;
     box-shadow: 1px 1px 20px 10px rgb(246, 136, 9);
     opacity: .5;
+    border-radius: 1vw;
 
 
 }
 
 .divDetailtext:hover {
 
-    opacity: .7;
+    opacity: 1;
+   
     transition: 700ms;
-    text-shadow: 0.3em 0.2em .13em black;
+    text-shadow: 0.1em 0.2em .1em black;
     box-shadow: 5px 3px 20px 10px rgb(8, 194, 8);
 }
 
 .divDetailImage {
-    height: 20vw;
-    width: 20vw;
+height: 35vw;
+    width: 40vw;
     border-radius: 10px;
     opacity: .7;
     box-shadow: 1px 1px 20px 10px rgb(246, 136, 9);
@@ -50,13 +53,13 @@
     transition: 500ms;
     opacity: 1;
     height: 35vw;
-    width: 35vw;
-    transition: 700ms;
+width: 40vw;
+    transition: 500ms;
 }
 
 .img {
-    height: 20vw;
-    width: 20vw;
+    height: 35vw;
+    width: 35vw;
     border-radius: 10px;
 
 
@@ -64,8 +67,7 @@
 }
 
 .img:hover {
-    height: 35vw;
-    width: 35vw;
+   
     transition: 700ms;
 }
 
@@ -77,11 +79,118 @@
     box-shadow: 1px 2px 10px 1px white;
     width: auto;
     height: auto;
-    font-size: 40px;
+    font-size: 2vw;
     opacity: 1;
 }
 
 .label {
     color: rgb(246, 136, 9);
+
+}
+
+
+
+.divBar {
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: space-between;
+    top:0;
+    width: 100%;
+    position:fixed;
+    z-index: 5;
+background-color: black;
+
+padding: .8vw;
+
+}
+
+
+
+.logoutButton{
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+}
+
+
+.homeButtonAbout {
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+        left: 10vw;
+     
+
+}
+
+.homeButtonFavorites {
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+    left: 10vw;
+
+}
+
+
+.favoritesButtonHome {
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+justify-content: center;
+position: absolute;
+    left: 10vw;
+
+}
+
+.favoritesButtonAbout {
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+position: absolute;
+left: 20vw;
+
+}
+
+.aboutButtonHome {
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+position: absolute;
+    left: 20vw;
+
+}
+.aboutButtonFavorites {
+  
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+position: absolute;
+    left: 20vw;
+
+}
+
+.searchBar {
+  
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    position: absolute;
+    right: 3vw;
+
 
 }

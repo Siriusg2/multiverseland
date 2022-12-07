@@ -1,7 +1,10 @@
 .h1 {
     display: none;
+   border: 5px solid red;
     color: white;
     font-size: 2vw;
     position: relative;
-    left: 10vw;
+
+    top: 100%;
+    width: 100%;
 }

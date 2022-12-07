@@ -1,8 +1,104 @@
-.divSearchBar {
+.divBar {
     display: flex;
     flex-direction: row wrap;
-    justify-content: flex-end;
+    justify-content: space-between;
+    top:0;
     width: 100%;
+    position:fixed;
+    z-index: 5;
+background-color: black;
+
+padding: .8vw;
+
+}
+
+
+
+.logoutButton{
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+}
+
+
+.homeButtonAbout {
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+        left: 10vw;
+     
+
+}
+
+.homeButtonFavorites {
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+    left: 10vw;
+
+}
+
+
+.favoritesButtonHome {
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+justify-content: center;
+position: absolute;
+    left: 10vw;
+
+}
+
+.favoritesButtonAbout {
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+position: absolute;
+left: 20vw;
+
+}
+
+.aboutButtonHome {
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+position: absolute;
+    left: 20vw;
+
+}
+.aboutButtonFavorites {
+  
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+position: absolute;
+    left: 20vw;
+
+}
+
+.searchBar {
+  
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    position: absolute;
+    right: 3vw;
 
 
 }

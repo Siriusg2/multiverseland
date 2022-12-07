@@ -1,3 +1,83 @@
+.containerFavorites {
+    display: flex;
+    flex-direction: column;
+    align-items: space-evenly;
+    margin-top: 5vw;
+
+ 
+}
+
+.divCardsFavorites {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3vw;
+    grid-auto-rows: minmax(10vw, auto);
+    justify-items: center;
+
+
+
+}
+
+.filterOptions {
+
+    align-self: center;
+    display: flex;
+    flex-direction: row wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    position: fixed;
+    z-index: 10;
+  
+}
+
+
+.selectGender {
+    font-weight: bolder;
+    font-size: 1.2vw;
+    font-style: oblique;
+    height: 3vw;
+    width: 10vw;
+    background-color: rgb(246, 136, 9);
+    border-radius: 5px;
+    color: white;
+    box-shadow: 1px 1px 10px 1px rgb(246, 136, 9);
+    text-align: center;
+}
+
+.selectId {
+    font-style: oblique;
+    font-weight: bolder;
+    font-size: 1.2vw;
+    height: 3vw;
+    width: 10vw;
+    background-color: rgb(8, 194, 8);
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    box-shadow: 1px 1px 10px 1px rgb(8, 194, 8);
+}
+
+
+.labelId {
+    font-style: oblique;
+    color: rgb(8, 194, 8);
+    align-self: center;
+    text-shadow: 1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff,
+        1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    font-weight: bolder;
+    font-size: 2vw;
+}
+
+.labelgender {
+    font-style: oblique;
+    font-weight: bolder;
+    color: rgb(246, 136, 9);
+    align-self: center;
+    font-size: 2vw;
+    text-shadow: 1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff,
+        1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+
 .divCard {
     display: flex;
     flex-direction: column;
@@ -35,7 +115,7 @@
     box-shadow: 2px 2px 20px 2px black;
 }
 
-.firstText {
+.nameCharactertext {
     color: white;
     opacity: 0.7;
     background-color: rgb(246, 136, 9);
@@ -50,7 +130,7 @@
 
 }
 
-.firstText:hover {
+.nameCharactertext:hover {
     opacity: 1;
     color: rgb(246, 136, 9);
     background-color: rgb(8, 194, 8);
@@ -58,7 +138,7 @@
     font-weight: bold;
 }
 
-.secondText {
+.speciesCharactertext {
 
     position: relative;
     bottom: -.7vw;
@@ -71,7 +151,7 @@
     font-weight: bold;
 }
 
-.thirdText {
+.genderCharactertext {
     font-size: 1.2vw;
     position: relative;
     top: -.9vw;
@@ -79,4 +159,9 @@
     color: rgb(246, 136, 9);
     font-style: italic;
     font-weight: bold;
+}
+
+.idCharacterText {
+    font-weight: bolder;
+    color: rgb(8, 194, 8);
 }

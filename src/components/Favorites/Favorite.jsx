@@ -9,12 +9,13 @@ const Favorite = (props) => {
   return (
     <div className={styles.divCard}>
       <NavLink to={`/detail/${props.id}`}>
-        <span className={styles.firstText}>{props.name}</span>
+        <span className={styles.nameCharactertext}>{props.name}</span>
       </NavLink>
       <img src={props.image} alt="" className={styles.imgFavorite} />
 
-      <span className={styles.secondText}>{props.species}</span>
-      <span className={styles.thirdText}>{props.gender}</span>
+      <span className={styles.speciesCharactertext}>{props.species}</span>
+      <span className={styles.genderCharactertext}>{props.gender}</span>
+      <span className={styles.idCharacterText}>ID: #{props.id}</span>
     </div>
   );
 };
