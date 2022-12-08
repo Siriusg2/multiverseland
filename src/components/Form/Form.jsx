@@ -23,11 +23,11 @@ class Form extends React.Component {
       this.state.username.length &&
       this.state.password.length
     ) {
-      alert("Los datos son correctos, pero no estas registrado");
+      alert("Data is correct, but you aren't  registered");
 
       this.setState({ username: "", password: "", errors: {} });
     } else {
-      alert("Debes corregir los errores");
+      alert("You must correct the mistakes");
     }
   }
 
@@ -47,22 +47,22 @@ class Form extends React.Component {
     const regexEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 
     if (!username) {
-      errors.usernamevoid = 'El campo  "Username" no debe estar vacio';
+      errors.usernamevoid = 'The field "Username" must not be empty';
     } else if (!regexEmail.test(username)) {
       errors.usernametype =
-        'Debe ser un correo válido. Ejemplo: "alguien@algo.com"';
+        'It must be a valid email. Example: "someone@something.com"';
     } else if (username.length > 35) {
-      errors.usernamelength = "Debe tener menos de 35 caracterres";
+      errors.usernamelength = "Must be less than 35 characters";
     }
 
     if (password.length === 0) {
-      errors.passwordvoid = 'El campo "Password" no debe estar vacio';
+      errors.passwordvoid = 'The "Password" field must not be empty';
     } else if (password.length < 6) {
-      errors.password6 = "Debe tener mínimo 6 caracteres";
+      errors.password6 = "Must be at least 6 characters";
     } else if (!/[0-9]/.test(password)) {
-      errors.passwordnum = "Debe tener al menos 1 caracter numérico";
+      errors.passwordnum = "Must have at least 1 numeric character";
     } else if (password.length > 10) {
-      errors.password10 = "Debe tener máximo 10 caracteres";
+      errors.password10 = "Must have a maximum of 10 characters";
     }
 
     return errors;
