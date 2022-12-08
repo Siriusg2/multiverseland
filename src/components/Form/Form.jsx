@@ -47,7 +47,7 @@ class Form extends React.Component {
     const regexEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 
     if (!username) {
-      errors.usernamevoid = 'The field "Username" must not be empty';
+      errors.usernamevoid = 'The "Username" field  must not be empty';
     } else if (!regexEmail.test(username)) {
       errors.usernametype =
         'It must be a valid email. Example: "someone@something.com"';
@@ -85,7 +85,7 @@ class Form extends React.Component {
                 name="username"
                 value={this.state.username}
                 onChange={this.handleChange}
-                placeholder="Ingresa tu correo..."
+                placeholder="Enter your email..."
                 className={styles.input}
               />
             </div>
@@ -119,7 +119,7 @@ class Form extends React.Component {
                 name="password"
                 value={this.state.password}
                 onChange={this.handleChange}
-                placeholder="Ingresa tu contraseña..."
+                placeholder="Enter your password..."
                 className={styles.input}
               />
             </div>
