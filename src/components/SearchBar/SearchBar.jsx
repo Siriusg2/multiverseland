@@ -18,7 +18,7 @@ export default function SearchBar(props) {
   return (
     <>
       <input
-        placeholder="Ingresa un número"
+        placeholder="Enter a number..."
         onChange={onInput}
         className={styles.inputSearchBar}
         id="input"
@@ -30,12 +30,8 @@ export default function SearchBar(props) {
           props.fnOnS(character);
           setCharactername("");
         }}
-      >
-        Buscar
-      </button>
-      <button className={styles.buttonRandom} onClick={() => props.random()}>
-        Búsqueda Aleatoria
-      </button>
+      >Search</button>
+      <button className={styles.buttonRandom} onClick={() => props.random()}>Random Search</button>
     </>
   );
 }
