@@ -7,6 +7,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import { unActivestyle, unActivestyleLogout } from "./NavStyles.js";
 import {  useDispatch } from "react-redux";
 import { orderCardsaction, filterCardsaction } from "../../redux/actions";
+import Filter from "../Filter/Filter";
 
 function Nav(props) {
   const location = useLocation();
@@ -30,9 +31,7 @@ function Nav(props) {
         <div className={styles.logoutButton}>
           <NavLink
             to="/"
-            style={({ isActive }) =>
-              isActive ? undefined : unActivestyleLogout
-            }
+            style={unActivestyleLogout}
           >
             Logout
           </NavLink>
@@ -41,7 +40,7 @@ function Nav(props) {
         <div className={styles.favoritesButtonHome}>
           <NavLink
             to="/favorites"
-            style={({ isActive }) => (isActive ? undefined : unActivestyle)}
+            style={unActivestyle}
           >
             Favorites
           </NavLink>
@@ -49,7 +48,7 @@ function Nav(props) {
         <div className={styles.aboutButtonHome}>
           <NavLink
             to="/about"
-            style={({ isActive }) => (isActive ? undefined : unActivestyle)}
+            style={unActivestyle}
           >
             About
           </NavLink>
@@ -67,9 +66,7 @@ function Nav(props) {
         <div className={styles.logoutButton}>
           <NavLink
             to="/"
-            style={({ isActive }) =>
-              isActive ? undefined : unActivestyleLogout
-            }
+            style={unActivestyleLogout}
           >
             Logout
           </NavLink>
@@ -78,7 +75,7 @@ function Nav(props) {
         <div className={styles.homeButtonAbout}>
           <NavLink
             to="/home"
-            style={({ isActive }) => (isActive ? undefined : unActivestyle)}
+            style={unActivestyle}
           >
             Home
           </NavLink>
@@ -86,7 +83,7 @@ function Nav(props) {
         <div className={styles.favoritesButtonAbout}>
           <NavLink
             to="/favorites"
-            style={({ isActive }) => (isActive ? undefined : unActivestyle)}
+            style={unActivestyle}
           >
             Favorites
           </NavLink>
@@ -99,56 +96,24 @@ function Nav(props) {
     return (
       <div className={styles.divBar}>
         <div className={styles.logoutButton}>
-          <NavLink
-            to="/"
-            style={({ isActive }) =>
-              isActive ? undefined : unActivestyleLogout
-            }
-          >
+          <NavLink to="/" style={unActivestyleLogout}>
             Logout
           </NavLink>
         </div>
 
         <div className={styles.homeButtonFavorites}>
-          <NavLink
-            to="/home"
-            style={({ isActive }) => (isActive ? undefined : unActivestyle)}
-          >
+          <NavLink to="/home" style={unActivestyle}>
             Home
           </NavLink>
         </div>
 
         <div className={styles.aboutButtonFavorites}>
-          <NavLink
-            to="/about"
-            style={({ isActive }) => (isActive ? undefined : unActivestyle)}
-          >
+          <NavLink to="/about" style={unActivestyle}>
             About
           </NavLink>
         </div>
-        <div className={styles.filterOptions}>
-          <label className={styles.labelId}>Filter for Card's ID :</label>
-          <select
-            name="order"
-            className={styles.selectId}
-            onChange={(e) => handleChangeOrder(e)}
-          >
-            <option value="Ascending">Ascending</option>
-            <option value="Descending">Descending</option>
-          </select>
-          <label className={styles.labelgender}>
-            Filter for Character's Gender:
-          </label>
-          <select
-            name="gender"
-            className={styles.selectGender}
-            onChange={(e) => handleChangeFilter(e)}
-          >
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Unknow">Unknow</option>
-            <option value="Genderless">Genderless</option>
-          </select>
+        <div >
+          <Filter styles={styles} />
         </div>
       </div>
     );

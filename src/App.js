@@ -113,7 +113,6 @@ genera una nueva tarjeta, o envia un alert, para avisar al usuario que la tarjet
           random={random}
           className={styles.divNavBar}
         />
-      
         <Routes>
           <Route
             exact
@@ -127,12 +126,12 @@ genera una nueva tarjeta, o envia un alert, para avisar al usuario que la tarjet
             }
           />
 
-          <Route path="/about" element={<About />} />
+          <Route exact path="/about" element={<About />} />
 
-          <Route path="/detail/:detailID" element={<Detail /> } />
+          <Route exact path="/detail/:detailID" element={<Detail />} />
 
-          <Route path="/favorites" element={<Favorites />} />
-          <Route path="*" element={<NotFound />} />
+          <Route exact path="/favorites" element={<Favorites />} />
+          <Route exact path="*" element={<NotFound />} />
         </Routes>
         <Footer />;
       </>
