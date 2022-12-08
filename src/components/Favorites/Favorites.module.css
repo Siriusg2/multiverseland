@@ -33,7 +33,7 @@
     width: 18vw;
     height: 48vh;
     text-align: center;
-
+    transition: 700ms;
 
     opacity: 0.7;
     margin-top: 100px;
@@ -42,7 +42,7 @@
 
 .divCard:hover {
     opacity: 1;
-    transition: 500ms;
+    transition: 700ms;
 
     box-shadow: 5px 3px 15px 10px rgb(8, 194, 8);
 }
