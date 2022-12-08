@@ -75,15 +75,33 @@ height: 20vw;
 height: 15vw;
     width: 15vw;
     border-radius: 10px;
+filter: blur(10px);
 
 
+/* animation-name: logoAnimation;
+animation-duration: 3s;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in-out; */
 
 }
+
+/* .divDetailtext::after{
+    width: 30vw;
+    height: 30vw;
+    z-index: 4;
+    background-color: red;
+    position: absolute;
+    content: "";
+    opacity: .5;
+} */
 
 .img:hover {
     height: 20vw;
         width: 20vw;
     transition: 700ms;
+filter: blur(0px);
+    
+
 }
 
 .h3Info {
@@ -116,3 +134,20 @@ height: 15vw;
     text-decoration: none;
 
 }
+/* 
+@keyframes logoAnimation {
+    0% {
+        transform: scale(1) rotateZ(0deg);
+        filter: blur(1px) drop-shadow(0px 0px 0px red) brightness(0.7);
+    }
+
+    50% {
+        transform: scale(1.2) rotateZ(3deg);
+        filter: blur(0px) drop-shadow(16px 16px 20px rgb(83, 162, 247)) brightness(1.6);
+    }
+
+    100% {
+        transform: scale(1) rotateZ(0deg);
+        filter: blur(1px) drop-shadow(0px 0px 0px red) brightness(0.7);
+    }
+} */

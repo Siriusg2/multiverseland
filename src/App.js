@@ -105,7 +105,7 @@ genera una nueva tarjeta, o envia un alert, para avisar al usuario que la tarjet
           cuerpo del componente
 */
 
-  if (location.pathname !== "/") {
+  if (location.pathname !== "/") { 
     return (
       <>
         <Nav

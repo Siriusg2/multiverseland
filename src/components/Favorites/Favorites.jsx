@@ -9,49 +9,14 @@ class Favorites extends React.Component {
   constructor(props) {
     super(props);
     
-    this.handleChangeFilter = this.handleChangeFilter.bind(this);
-    this.handleChangeOrder = this.handleChangeOrder.bind(this);
   }
 
-  handleChangeOrder = (event) => {
-    const targetValue = event.target.value;
 
-    this.props.orderCards(targetValue);
-  };
-
-  handleChangeFilter = (event) => {
-    const targetValue = event.target.value;
-
-    this.props.filterCards(targetValue);
-  };
 
   render() {
     return (
       <div className={styles.containerFavorites}>
-        <div className={styles.filterOptions}>
-          <label className={styles.labelId}>Filter for Card's ID :</label>
-          <select
-            name="order"
-            className={styles.selectId}
-            onChange={(e) => this.handleChangeOrder(e)}
-          >
-            <option value="Ascending">Ascending</option>
-            <option value="Descending">Descending</option>
-          </select>
-          <label className={styles.labelgender}>
-            Filter for Character's Gender:
-          </label>
-          <select
-            name="gender"
-            className={styles.selectGender}
-            onChange={(e) => this.handleChangeFilter(e)}
-          >
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Unknow">Unknow</option>
-            <option value="Genderless">Genderless</option>
-          </select>
-        </div>
+       
         <div className={styles.divCardsFavorites}>
           {this.props.myFavorites.map((card) => (
             <Favorite
@@ -76,13 +41,8 @@ export const mapStateToProps = (state) => {
   };
 };
 
-export const mapDispatchToProps = (dispatch) => {
-  return {
-    filterCards: (gender) => dispatch(filterCardsaction(gender)),
-    orderCards: (type) => dispatch(orderCardsaction(type)),
-  };
-};
 
-export default connect(mapStateToProps, mapDispatchToProps)(Favorites);
+
+export default connect(mapStateToProps, null)(Favorites);
 // eslint-disable-next-line linebreak-style
 /* eslint-enable */

@@ -16,6 +16,7 @@
     opacity: .6;
     margin-top: 5vw;
     position: relative;
+    transition: 700ms;
 
 
 }
@@ -23,7 +24,7 @@
 
 .divCard:hover {
     opacity: 1;
-    transition: 500ms;
+    transition: 700ms;
 
     box-shadow: 5px 3px 15px 10px rgb(8, 194, 8);
 

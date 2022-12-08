@@ -24,6 +24,7 @@
     box-shadow: 1px 1px 20px 10px rgb(246, 136, 9);
     opacity: .5;
     border-radius: 1vw;
+        transition: 700ms;
 
 
 }
@@ -44,7 +45,7 @@ height: 35vw;
     opacity: .7;
     box-shadow: 1px 1px 20px 10px rgb(246, 136, 9);
     margin-top: 20px;
-
+transition: 700ms;
 
 }
 
@@ -54,7 +55,7 @@ height: 35vw;
     opacity: 1;
     height: 35vw;
 width: 40vw;
-    transition: 500ms;
+    transition: 700ms;
 }
 
 .img {
