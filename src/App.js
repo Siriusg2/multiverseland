@@ -14,16 +14,21 @@ import Form from "./components/Form/Form";
 
 import Favorites from "./components/Favorites/Favorites";
 import Footer from "./components/Footer/Footer";
+import { getAllCharacters } from "./redux/actions";
+import { useDispatch, useSelector } from "react-redux";
 
 /* componente principal */
 function App() {
-  /* estado del componente */
+  /* estados del componente */
   const [characters, setCharacters] = useState([]);
   const location = useLocation();
   const [access, setAccess] = useState(false);
   const username = "ggilavilans@gmail.com";
   const password = "123456";
   const navigate = useNavigate("");
+  const dispatch = useDispatch()
+  const selector = useSelector((state)=> state.allCharacters)
+
 
   // validacion de los datos del formulario de login
   const login = (userData) => {
@@ -35,6 +40,7 @@ function App() {
 
   useEffect(() => {
     !access && navigate("/");
+   
   }, [access, navigate]);
 
   /* funcion que se pasa por props hasta el componente SearchBar
@@ -66,7 +72,7 @@ cada vez que quiera agregar una tarjeta nueva */
           input.value = "";
         }
       });
-    console.log(characters);
+   
   };
 
   /* funcion que se pasa por props hasta el componente Card,

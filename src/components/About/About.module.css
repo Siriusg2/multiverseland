@@ -36,6 +36,7 @@ size: 10vw;
     border-radius: 50px;
     box-shadow: 1px 1px 20px 10px rgb(246, 136, 9);
     opacity: .5;
+    transition: 700ms;
 
 
 }
@@ -57,14 +58,14 @@ size: 10vw;
     box-shadow: 1px 1px 20px 10px rgb(246, 136, 9);
 height: 15vw;
     width: 15vw;
-
+    transition: 700ms;
 
 
 }
 
 .divDetailImage:hover {
     box-shadow: 5px 3px 20px 10px rgb(8, 194, 8);
-    transition: 500ms;
+  
     opacity: 1;
 height: 20vw;
     width: 20vw;
@@ -76,6 +77,7 @@ height: 15vw;
     width: 15vw;
     border-radius: 10px;
 filter: blur(10px);
+    transition: 700ms;
 
 
 /* animation-name: logoAnimation;
@@ -100,6 +102,7 @@ animation-timing-function: ease-in-out; */
         width: 20vw;
     transition: 700ms;
 filter: blur(0px);
+    transition: 700ms;
     
 
 }
