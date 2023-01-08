@@ -3,11 +3,11 @@ import { NavLink } from "react-router-dom";
 import styles from "./Card.module.css";
 import { addFavorite, removeFavorite } from "../../redux/actions";
 import { useState, useEffect } from "react";
-import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 
 function Card(props) {
   const [isFav, setIsFav] = useState(false);
-
+  const dispatch = useDispatch();
   const handleFavorite = () => {
     if (isFav === false) {
       setIsFav(true);
@@ -45,7 +45,7 @@ function Card(props) {
 
       <button
         onClick={() => {
-          props.onClose(props.name);
+          dispatch(props.removeCard(props.id));
         }}
         className={styles.buttonClose}
       >

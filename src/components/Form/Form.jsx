@@ -75,6 +75,9 @@ class Form extends React.Component {
           onSubmit={this.handleSubmit}
           onClick={() => this.props.login(this.state)}
         >
+          {" "}
+          <p className={styles.span}>default Username: admin@admin.com</p>
+          <p className={styles.span}>default Password: 123456</p>
           <div className={styles.hr}>
             <div className={styles.divLabelInput}>
               <label htmlFor="username" className={styles.labels}>

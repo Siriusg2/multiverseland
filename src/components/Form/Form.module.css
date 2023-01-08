@@ -13,7 +13,7 @@
     border-radius: 30px;
     box-shadow: 5px 3px 15px 10px rgb(246, 136, 9);
     opacity: .5;
-transition: 700ms;
+    transition: 700ms;
 
 }
 
@@ -37,7 +37,7 @@ transition: 700ms;
 
 .labels {
     color: rgb(246, 136, 9);
- 
+
     font-style: italic;
     font-weight: bold;
     font-size: 1.2vw;
@@ -51,14 +51,14 @@ transition: 700ms;
 
 .divButtonLogin {
 
-display: flex;
-flex-direction: row;
+    display: flex;
+    flex-direction: row;
     border-radius: 5px;
-   
+
 
 
     justify-content: center;
- 
+
 
 
 }
@@ -83,7 +83,7 @@ flex-direction: row;
     background-color: rgb(8, 194, 8);
     transition: 30ms;
 
-  
+
 
 
 }
@@ -95,7 +95,7 @@ flex-direction: row;
     width: 10vw;
     font-style: oblique;
     justify-self: flex-end;
-   
+
 }
 
 
@@ -103,12 +103,12 @@ flex-direction: row;
 
 .span {
     color: rgb(246, 136, 9);
-   
+
     text-align: center;
     font-weight: bold;
     font-size: 1vw;
     font-style: italic;
-    
+
 
 
 }
@@ -125,13 +125,13 @@ flex-direction: row;
 }
 
 .divSpan {
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-height: 9vw;
-align-self: center;
-width: 19vw;
-align-items: center;
+    height: 9vw;
+    align-self: center;
+    width: 19vw;
+    align-items: center;
     justify-content: center;
     align-self: center;
 
@@ -146,6 +146,6 @@ align-items: center;
 
     height: 9vw;
     width: 19vw;
-   
+
 
 }

@@ -3,10 +3,12 @@
 import React from "react";
 import styles from "./Detail.module.css";
 import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 
 
 const Detail = () => {
+  const characters = useSelector((state)=> state.allCharacters)
   const cardName = useParams();
   const [character, setCharacter] = useState({
     name: "",
