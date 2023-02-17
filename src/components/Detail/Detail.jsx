@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-import React from "react";
+// import React from "react";
 import styles from "./Detail.module.css";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";

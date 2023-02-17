@@ -118,6 +118,30 @@ function Nav(props) {
       </div>
     );
   }
+  if (location.pathname.startsWith("/detail") ) {
+    return (
+      <div className={styles.divBar}>
+        <div className={styles.logoutButton}>
+          <NavLink to="/" style={unActivestyleLogout}>
+            Logout
+          </NavLink>
+        </div>
+
+        <div className={styles.homeButtonFavorites}>
+          <NavLink to="/home" style={unActivestyle}>
+            Home
+          </NavLink>
+        </div>
+
+        <div className={styles.aboutButtonFavorites}>
+          <NavLink to="/about" style={unActivestyle}>
+            About
+          </NavLink>
+        </div>
+      
+      </div>
+    );
+  }
 }
 
 export default Nav;

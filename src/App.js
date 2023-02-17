@@ -39,9 +39,9 @@ function App() {
   };
 
   useEffect(() => {
-    !access && navigate("/");
+navigate("/home");
    
-  }, [access, navigate]);
+  }, []);
 
   /* funcion que se pasa por props hasta el componente SearchBar
 con esta funcion, el boton "agregar" de la barra de busqueda hace un llamado a la API
@@ -111,7 +111,7 @@ genera una nueva tarjeta, o envia un alert, para avisar al usuario que la tarjet
           cuerpo del componente
 */
 
-  if (location.pathname !== "/") { 
+ 
     return (
       <>
         <Nav
@@ -137,19 +137,14 @@ genera una nueva tarjeta, o envia un alert, para avisar al usuario que la tarjet
           <Route exact path="/detail/:detailID" element={<Detail />} />
 
           <Route exact path="/favorites" element={<Favorites />} />
-          <Route exact path="*" element={<NotFound />} />
+          {/* <Route exact path="*" element={<NotFound />} /> */}
         </Routes>
         <Footer />;
       </>
     );
   }
-  return (
-    <div className={styles.divForm}>
-      <Form login={login} />
-      
-    </div>
-  );
-}
+  
+
 
 export default App;
 
