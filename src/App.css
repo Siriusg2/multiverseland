@@ -1,5 +1,5 @@
 .App {
-   text-align: right;
-   background-image: url('/Rick_and_Morty.png');
+  text-align: right;
+  background-image: url('./assets/Rick_and_Morty.png');
 
 }

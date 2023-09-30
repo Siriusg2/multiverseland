@@ -14,7 +14,7 @@ import Form from "./components/Form/Form";
 
 import Favorites from "./components/Favorites/Favorites";
 import Footer from "./components/Footer/Footer";
-import { getAllCharacters } from "./redux/actions";
+
 import { useDispatch, useSelector } from "react-redux";
 
 /* componente principal */
@@ -148,5 +148,4 @@ genera una nueva tarjeta, o envia un alert, para avisar al usuario que la tarjet
 
 export default App;
 
-// eslint-disable-next-line linebreak-style
-/* eslint-enable */
+
