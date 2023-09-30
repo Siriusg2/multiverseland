@@ -1,6 +1,7 @@
-name: multiverseland_react
+name: multiverseland
 services:
-  client_react:
+  client:
+    container_name: multiverseland
     restart: always
     build:
       context: .
