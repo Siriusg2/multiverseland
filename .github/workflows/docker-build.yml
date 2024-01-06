@@ -27,7 +27,7 @@ jobs:
       - name: SSH into remote machine and pull changes
         uses: appleboy/ssh-action@v1.0.0
         with:
-          key: ${{ secrets.STARWARS_SSH_KEY }}
+          key: ${{ secrets.SSH_KEY }}
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USERNAME }}
 
