@@ -1,21 +1,20 @@
-name: multiverseland
+version: "3"
+
 services:
   client:
     container_name: multiverseland
     restart: always
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.prod
     volumes:
       - .:/app
     ports:
-      - "3002:3001"
- 
+      - "3000:80"
     networks:
-      - cloudflared 
+      - main
 
-networks: 
-  cloudflared:
+networks:
+  main:
     driver: bridge
     external: true
-    
