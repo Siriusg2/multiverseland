@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 
 function Card(props) {
   const [isFav, setIsFav] = useState(false);
-
+  console.log("isFav");
   const handleFavorite = () => {
     if (isFav === false) {
       setIsFav(true);
