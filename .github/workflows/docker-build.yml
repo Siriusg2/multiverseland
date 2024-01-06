@@ -11,14 +11,17 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.5.2
+        with:
+          ssh-private-key: ${{ secrets.SSH_KEY }}
       - name: SSH into remote machine and pull changes
         uses: appleboy/ssh-action@v1.0.0
         with:
           key: ${{ secrets.SSH_KEY }}
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USERNAME }}
-          port: ${{ secrets.REMOTE_PORT }}
+
           script: cd ../home/repos/multiverseland && git pull
 
       - name: SSH into remote machine and pull changes
@@ -27,5 +30,5 @@ jobs:
           key: ${{ secrets.STARWARS_SSH_KEY }}
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USERNAME }}
-          port: ${{ secrets.REMOTE_PORT }}
+
           script: cd ../home/repos/multiverseland &&  docker compose down --rmi local && docker compose -f compose-prod.yml up -d
