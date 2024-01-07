@@ -10,7 +10,7 @@ services:
     volumes:
       - .:/app
     ports:
-      - "4321:80"
+      - "4322:80"
     networks:
       - main
 
