@@ -20,4 +20,4 @@ jobs:
           username: ${{ secrets.REMOTE_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd ../home/repos/multiverseland && docker compose down --rmi local && git pull && docker compose up -d
+            cd ../home/repos/multiverseland && ls
