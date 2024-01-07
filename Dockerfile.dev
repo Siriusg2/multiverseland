@@ -1,7 +1,0 @@
-FROM node:latest
-RUN npm install -g pnpm
-COPY package*.json ./
-RUN pnmp install
-COPY . .
-EXPOSE 3001
-CMD ["bun", "run", "dev"]

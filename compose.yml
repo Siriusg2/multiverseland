@@ -2,15 +2,15 @@ version: "3"
 
 services:
   client:
-    container_name: multiverseland
+    container_name: portafolio
     restart: always
     build:
       context: .
-      dockerfile: Dockerfile.prod
+      dockerfile: Dockerfile
     volumes:
       - .:/app
     ports:
-      - "3000:80"
+      - "4321:8080"
     networks:
       - main
 
