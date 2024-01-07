@@ -1,39 +1,4 @@
-# name: Pull Main and rebuild containers
-# on:
-#   push:
-#     branches:
-#       - master
-
-# jobs:
-#   deploy:
-#     runs-on: ubuntu-latest
-
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v2
-#       - name: Set up SSH
-#         uses: webfactory/ssh-agent@v0.5.2
-#         with:
-#           ssh-private-key: ${{ secrets.SSH_KEY }}
-#       - name: SSH into remote machine and pull changes
-#         uses: appleboy/ssh-action@v1.0.0
-#         with:
-#           key: ${{ secrets.SSH_KEY }}
-#           host: ${{ secrets.REMOTE_HOST }}
-#           username: ${{ secrets.REMOTE_USERNAME }}
-
-#           script: cd ../home/repos/multiverseland && git pull
-
-#       - name: SSH into remote machine and pull changes
-#         uses: appleboy/ssh-action@v1.0.0
-#         with:
-#           key: ${{ secrets.SSH_KEY }}
-#           host: ${{ secrets.REMOTE_HOST }}
-#           username: ${{ secrets.REMOTE_USERNAME }}
-
-#           script: cd ../home/repos/multiverseland &&  docker compose down --rmi local && docker compose -f compose-prod.yml up -d
-
-name: SSH Workflow
+name: Deploy to Remote Server
 
 on:
   push:
@@ -48,19 +13,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Generate SSH key
-        run: |
-          mkdir -p ~/.ssh
-          ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -q -N ""
-          echo "$SSH_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          eval "$(ssh-agent -s)"
-          ssh-add ~/.ssh/id_rsa
-
       - name: SSH and run commands
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
           script: |
             ls -la
