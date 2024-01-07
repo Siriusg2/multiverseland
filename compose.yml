@@ -2,7 +2,7 @@ version: "3"
 
 services:
   client:
-    container_name: portafolio
+    container_name: multiverseland
     restart: always
     build:
       context: .
@@ -10,7 +10,7 @@ services:
     volumes:
       - .:/app
     ports:
-      - "4321:8080"
+      - "4321:80"
     networks:
       - main
 
